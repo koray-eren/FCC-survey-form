@@ -1,23 +1,37 @@
 <!DOCTYPE html>
 <style>
 body{
+    display: flex;
     font-family: Helvetica;
     text-align: center;
     margin-left: auto;
     margin-right: auto;
     max-width: 1300px;
+    background-color: rgb(0, 0, 65);
+    color:white;
+    flex-direction: column;
 }
 #back-button{
     text-align: left;
     margin-left: 10%;
+    color: white;
+}
+a{
+    color: white;
+}
+a:visited{
+    color: white;
 }
 input{
     width: 40%;
 }
 form{
-    display: flex;
     justify-content: center;
+    display: flex;
+    background-color: navy;
     width: 80%;
+    align-self: center;
+    margin: auto;
 }
 label{
     justify-content: flex-start;
@@ -31,10 +45,10 @@ label{
     </head>
     <body>
         <h1 id=title> Survey Form - Free Code Camp Project</h1>
-        <p id=description>Surevy form to collect and validate basic info</p>
+        <p id=description>Survey form to collect and validate basic info</p>
         <p id="back-button"> <a href="https://koray-eren.github.io/"> < Back</a></p>
         <form action="" id="survey-form">
-            <label for="name">Name </label><br>
+            <label for="name">Name: </label><br>
             <input type="text" id="name">
         </form>
     </body>
