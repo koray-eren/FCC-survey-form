@@ -25,16 +25,26 @@ a:visited{
 input{
     width: 40%;
 }
-form{
-    justify-content: center;
+#survey-form{
+    display: flex;
+    background-color: coral;
+    width: 40%;
+    margin: auto;
+    flex-direction: column;
+    align-items: center;
+    padding: 2%;
+}
+label{
+    justify-items: center;
+    
+}
+#form-container{
     display: flex;
     background-color: navy;
     width: 80%;
+    height: 1000px;
     align-self: center;
-    margin: auto;
-}
-label{
-    justify-content: flex-start;
+    flex-direction: column;
 }
 </style>
 
@@ -47,9 +57,12 @@ label{
         <h1 id=title> Survey Form - Free Code Camp Project</h1>
         <p id=description>Survey form to collect and validate basic info</p>
         <p id="back-button"> <a href="https://koray-eren.github.io/"> < Home Page</a></p>
-        <form action="" id="survey-form">
-            <label for="name">Name: </label><br>
-            <input type="text" id="name">
-        </form>
+        <div id="form-container">
+            <form action="" id="survey-form">
+                <label for="name">Name: </label><br>
+                <input required type="text" id="name">
+                <input type="submit" value="Submit">
+            </form>
+        </div>
     </body>
 </html>
