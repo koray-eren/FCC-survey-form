@@ -34,7 +34,7 @@ input{
     align-self: center;
     margin-top: 2%;
 }
-label, input {
+label, input, select {
     display: block;
     margin-bottom: 15px;
 }
@@ -56,6 +56,7 @@ label{
     flex-direction: column;
     justify-content: flex-start;
 }
+
 </style>
 
 <html>
@@ -69,10 +70,27 @@ label{
         <p id="back-button"> <a href="https://koray-eren.github.io/"> < Home Page</a></p>
         <div id="form-container">
             <form action="" id="survey-form">
-                <label for="name">Name: </label>
-                <input required type="text" id="name">
-                <label for="email">Email:</label>
-                <input required type="text" id="name">
+                <label for="name" id="name-label">Name: </label>
+                <input required placeholder="Enter your name" type="text" id="name">
+                
+                <label for="email" id="email-label">Email:</label>
+                <input required placeholder="Enter your email" type="email" id="name">
+                
+                <label for="number" id="number-label">Age (optional):</label>
+                <input placeholder="Enter your age" min="3" max="150" type="number" id="number">
+                
+                <label for="dropdown" id="dropdown-label">Income Bracket (optional): </label>
+                <select name="dropdown" id="dropdown">
+                    <option value=""></option>
+                    <option value="Less than $20,000">Less than $20,000</option>
+                    <option value="$20,000 - $100,000">$20,000 - $100,000</option>
+                    <option value="More than $100,000">More than $100,000</option>
+                </select>
+
+                <label for="radio" id="radio-label">Age (optional):</label>
+                <input type="radio" id="radio">
+
+
                 <input type="submit" value="Submit">
             </form>
         </div>
