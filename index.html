@@ -34,7 +34,7 @@ input{
     align-self: center;
     margin-top: 2%;
 }
-label, input, select {
+label:not(#radio-label), input, select {
     display: block;
     margin-bottom: 15px;
 }
@@ -44,7 +44,7 @@ input:not([type=submit]){
 input[type=submit]{
     align-self: center;
 }
-label{
+label:not(#radio-label){
     align-self: flex-start;
 }
 #form-container{
@@ -55,6 +55,14 @@ label{
     align-self: center;
     flex-direction: column;
     justify-content: flex-start;
+}
+#radio-div{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+#radio-heading{
+    align-self: flex-start;
 }
 
 </style>
@@ -86,10 +94,18 @@ label{
                     <option value="$20,000 - $100,000">$20,000 - $100,000</option>
                     <option value="More than $100,000">More than $100,000</option>
                 </select>
-
-                <label for="radio" id="radio-label">Age (optional):</label>
-                <input type="radio" id="radio">
-
+                
+                <p id="radio-heading">Select an option:</p>
+                <div id="radio-div">
+                    <label for="radio1">Option1</label>
+                    <input type="radio" id="radio1" name="radio" value="Option1">
+                    <label for="radio2">Option2</label>
+                    <input type="radio" id="radio2" name="radio" value="Option2">
+                    <label for="radio3">Option3</label>
+                    <input type="radio" id="radio3" name="radio" value="Option3">
+                    <label for="radio4">Option4</label>
+                    <input type="radio" id="radio4" name="radio" value="Option4">
+                </div>
 
                 <input type="submit" value="Submit">
             </form>
