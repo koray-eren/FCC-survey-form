@@ -43,6 +43,7 @@ input:not([type=submit]){
 }
 input[type=submit]{
     align-self: center;
+    margin-top: 15px;
 }
 label:not(#radio-label){
     align-self: flex-start;
@@ -63,6 +64,18 @@ label:not(#radio-label){
 }
 #radio-heading{
     align-self: flex-start;
+}
+#checkbox-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin-left: 70px;
+}
+input[type=checkbox]{
+    position: block;
+    left: 0px;
+    bottom: 190px;
+    margin: auto;
 }
 
 </style>
@@ -103,10 +116,22 @@ label:not(#radio-label){
                     <input type="radio" id="radio2" name="radio" value="Option2">
                     <label for="radio3">Option3</label>
                     <input type="radio" id="radio3" name="radio" value="Option3">
-                    <label for="radio4">Option4</label>
-                    <input type="radio" id="radio4" name="radio" value="Option4">
+                </div>
+                
+                <div id="checkbox-container">
+                    <label for="device1"> iPhone
+                        <input type="checkbox" id="device1" name="device" value="iPhone">
+                    </label>
+                    <label for="device2"> iPad
+                        <input type="checkbox" id="device2" name="device" value="iPad">
+                    </label>
+                    <label for="device3">Macbook
+                        <input type="checkbox" id="device3" name="device" value="Macbook">
+                    </label>
                 </div>
 
+                <label for="textarea">Other Comments: </label>
+                <textarea name="textarea" id="textarea" cols="30" rows="10"></textarea>
                 <input type="submit" value="Submit">
             </form>
         </div>
