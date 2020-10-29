@@ -62,19 +62,15 @@ label:not(#radio-label){
     flex-direction: row;
     justify-content: center;
 }
-#radio-heading{
+#form-heading{
     align-self: flex-start;
 }
 #checkbox-container{
     display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    margin-left: 70px;
+    flex-direction: row;
+    justify-content: space-evenly;
 }
 input[type=checkbox]{
-    position: block;
-    left: 0px;
-    bottom: 190px;
     margin: auto;
 }
 
@@ -108,7 +104,7 @@ input[type=checkbox]{
                     <option value="More than $100,000">More than $100,000</option>
                 </select>
                 
-                <p id="radio-heading">Select an option:</p>
+                <p id="form-heading">Select an option:</p>
                 <div id="radio-div">
                     <label for="radio1">Option1</label>
                     <input type="radio" id="radio1" name="radio" value="Option1">
@@ -118,6 +114,7 @@ input[type=checkbox]{
                     <input type="radio" id="radio3" name="radio" value="Option3">
                 </div>
                 
+                <p id="form-heading">Which devices do you have?</p>
                 <div id="checkbox-container">
                     <label for="device1"> iPhone
                         <input type="checkbox" id="device1" name="device" value="iPhone">
